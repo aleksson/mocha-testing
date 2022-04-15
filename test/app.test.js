@@ -2,26 +2,32 @@ const assert = require('chai').assert;
 const app = require('../app');
 console.clear();
 
-describe('--- Application Test ---', () => {
-  let testCounter = 0;
+describe('Mocha Application Testsuite', () => {
+  
+  let done = false, testCounter = 0;
 
   before(() => console.log('Loading Tests...'));
   beforeEach(() => {
     testCounter++;
-    console.log(`# Test ${testCounter} #`);
+    console.log(`### Test ${testCounter} ###`);
   });
 
   afterEach(() => console.log(`\n`));
   after(() => {
-    console.log(`\n### Done, ${testCounter} tests was loaded`);
+    done = true;
+    console.log(`### Done [${testCounter} tasks] ###`);
   });
 
-
-  it('app should return hello', () => {
-    assert.equal(app(), 'hello');
+  it('app should return "mocha-testing"', () => {
+    assert.equal(app(), 'mocha-testing');
   });
 
-  it('port is 3000', () => {
-    assert.equal(app.PORT, 3000);
+  it('app developer is "you"', () => {
+    assert.equal(app.DEVELOPER, 'aleksson');
   });
+
+  it('port is 1337', () => {
+    assert.equal(app.PORT, 1337);
+  });
+
 });

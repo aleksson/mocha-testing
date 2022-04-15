@@ -1,4 +1,6 @@
-module.exports = () => 'hello';
+module.exports = () => 'mocha-testing';
 
-const getPort = 3000;
-module.exports.PORT = getPort;
+module.exports.DEVELOPER = 'aleksson';
+
+const appPort = 1337;
+module.exports.PORT = appPort;
