@@ -1,8 +1,7 @@
-# mocha-testing
-Mocha JavaScript Testing
+# Mocha - JavaScript Testing
+Mocha  Testing with Chai
 
-
-####  Mocha Application Testsuite Exempel
+####  Mocha Application Testsuite Exempel Results
 
 ````
   ✔ app should return "mocha-testing"
